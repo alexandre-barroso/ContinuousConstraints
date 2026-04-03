@@ -1,6 +1,6 @@
 # Continuous Constraints, Empirical Density, and Violation Computation
 
-This repository accompanies the paper **“Continuous Constraints, Empirical Density, and Violation Computation.”** It contains the manuscript source, the illustrative corpus used by the implementation, the computational script that carries out the analysis, and a graphical interface for interactive use.
+This repository accompanies the paper **“Continuous Constraints, Empirical Density, and Violation Computation.”** It contains the manuscript source, the illustrative corpus used by the implementation, the computational script that carries out the analysis, and a graphical interface for interactive use. It also contains two zip bundles: "plots.zip" (all images generated from the script) and "text_reports.zip" (the text file reports generated from the script).
 
 The repository is intended as a reproducible companion to the paper rather than as a general-purpose phonological software package. Its principal purpose is to make the computational workflow described in the article inspectable and rerunnable over the illustrative data, while also allowing readers to substitute their own datasets and explore alternative continuous candidate regions.
 
