@@ -211,10 +211,6 @@ This file is the most convenient summary for comparison across runs.
 
 This file contains sampled values from the empirical probability density over the continuous candidate space. It is useful for inspecting the estimated empirical distribution numerically rather than only graphically.
 
-### `MaxEnt_values.txt`
-
-This file contains sampled values from the modeled maximum-entropy probability density. It provides a numerical representation of the continuous model distribution corresponding to the current settings.
-
 ### Density and model comparison figures
 
 The implementation generates figures that display:
