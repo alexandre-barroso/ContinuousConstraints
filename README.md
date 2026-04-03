@@ -6,11 +6,10 @@ The repository is intended as a reproducible companion to the paper rather than 
 
 ## Repository contents
 
-- `main.tex` and `section_*.tex`: LaTeX source of the paper.
-- `main.pdf`: compiled paper.
 - `app.py`: computational implementation.
 - `ui.py`: graphical interface for launching the analysis.
 - `data.txt`: illustrative acoustic dataset.
+- Two zip bundles with the results of the already-run tests for the paper.
 
 ## Quick start
 
