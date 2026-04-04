@@ -6,10 +6,20 @@ The repository is intended as a reproducible companion to the paper rather than 
 
 ## Repository contents
 
-- `app.py`: computational implementation.
+Main scripts:
+
+- `app.py`: computational implementation of the analysis.
 - `ui.py`: graphical interface for launching the analysis.
+
+Auxiliary scripts:
+
+- `validation_suite.py`: Validates the core model by comparing different *link functions* (multiplication, subtraction, division, exponential) that combine perceptual and articulatory constraints, and tests sensitivity to KDE bandwidth and optimization initialization, reporting KL-divergence scores for each.
+- `link_choice_suite.py`: Extends the link function comparison by fitting and evaluating all link variants in parallel across multiple speakers/vowels, computing diagnostics like Spearman correlations and stratified statistics to determine which link function best fits the data.
+- `robustness_suite.py`: Stress-tests the fitted model's stability by running bootstrap resampling, split-half reliability checks, leave-one-speaker-out transfers, and per-speaker fits, then summarizing variance across all those conditions into a consolidated report.
 - `data.txt`: illustrative acoustic dataset.
-- Two zip bundles with the results of the already-run tests for the paper.
+
+Pre-run file results:
+- A few zip bundles with the results of the already-run tests for the paper.
 
 ## Quick start
 
@@ -283,6 +293,46 @@ When using a new dataset, the following procedure is recommended:
 6. run the analysis and allow the optimizer to estimate new weights.
 
 This is important because the default weights in the interface were estimated for the paper’s demonstrative subset, not for arbitrary corpora.
+
+## How to run the auxiliary scripts
+
+```bash
+python3 validation_suite.py \
+  --data data.txt \
+  --output_dir validation \
+  --vogais e \
+  --entrevistados 1,3,5 \
+  --alvo_F1 421 \
+  --alvo_F2 1887 \
+  --limiar_1 600 \
+  --limiar_2 345 \
+  --neutro_F1 610 \
+  --neutro_F2 1900 \
+  --L 1 \
+  --k_1 1 \
+  --k_2 7 \
+  --bandwidths 0.10,0.15,0.20,0.25,0.30 \
+  --init_sets "1,1,1;0.5,0.5,0.5;2,1,1;1,2,1;1,1,2;2,0.5,0.5"
+```
+
+```bash
+ python3 robustness_suite.py \
+  --data data.txt \
+  --output_dir robustness \
+  --n_boot 24 \
+  --n_splits 12 \
+  --coarse_resolution 80 \
+  --fine_resolution 160
+```
+
+```bash
+python3 link_choice_suite.py \
+  --data data.txt \
+  --output_dir link_choice \
+  --n_boot 20 \
+  --coarse_resolution 80 \
+  --fine_resolution 160
+```
 
 ## Scope and intended use
 
