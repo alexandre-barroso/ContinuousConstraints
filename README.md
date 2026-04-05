@@ -1,6 +1,6 @@
-# Continuous Constraints, Empirical Density, and Violation Computation
+# Violations for Continuous Candidates in Constraint-based Phonology
 
-This repository accompanies the paper **“Continuous Constraints, Empirical Density, and Violation Computation.”** It contains the manuscript source, the illustrative corpus used by the implementation, the computational script that carries out the analysis, and a graphical interface for interactive use. It also contains two zip bundles: "plots.zip" (all images generated from the script) and "text_reports.zip" (the text file reports generated from the script).
+This repository accompanies the paper **“Violations for Continuous Candidates in Constraint-based Phonology”**. It contains the illustrative corpus used by the implementation, the computational script that carries out the analysis, and a graphical interface for interactive use. It also contains a few zip bundles with aux. scripts and supplementary files.
 
 The repository is intended as a reproducible companion to the paper rather than as a general-purpose phonological software package. Its principal purpose is to make the computational workflow described in the article inspectable and rerunnable over the illustrative data, while also allowing readers to substitute their own datasets and explore alternative continuous candidate regions.
 
@@ -18,7 +18,7 @@ Auxiliary scripts:
 - `robustness_suite.py`: Stress-tests the fitted model's stability by running bootstrap resampling, split-half reliability checks, leave-one-speaker-out transfers, and per-speaker fits, then summarizing variance across all those conditions into a consolidated report.
 - `data.txt`: illustrative acoustic dataset.
 
-Pre-run file results:
+Supplementary files:
 - A few zip bundles with the results of the already-run tests for the paper.
 
 ## Quick start
